@@ -30,7 +30,7 @@
 #include "camera/khaje-camera-sensor-mot-rhode-overlay.dtsi"
 #include "khaje-rhode-wl2866d.dtsi"
 
-#include "khaje-fogona-fps-overlay.dtsi"
+#include "khaje-rhode-fps-overlay.dtsi"
 &firmware {
 	android {
 		vbmeta {
