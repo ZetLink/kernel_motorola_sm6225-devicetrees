@@ -18,7 +18,7 @@
 #include "carrier-channel-ids.dtsi"
 #include <dt-bindings/moto/moto-mem-reserve.h>
 #include "bengal-thermal-overlay.dtsi"
-//#include "khaje-sde-display.dtsi"
+#include "khaje-sde-display.dtsi"
 
 &utags {
 	compatible = "mmi,utags";

@@ -14,7 +14,7 @@
 /plugin/;
 
 #include "khaje-rhode-common-overlay.dtsi"
-//#include "khaje-rhode-audio-overlay.dtsi"
+#include "khaje-rhode-audio-overlay.dtsi"
 / {
 	model = "rhode";
     compatible = "qcom,khaje-idp", "qcom,khaje", "qcom,idp", "mot.rhode";
