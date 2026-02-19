@@ -1,4 +1,4 @@
-DTC_INCLUDE += $(srctree)/../sm8550-modules/qcom/opensource/audio-kernel/include
+DTC_INCLUDE += $(srctree)/../sm6225-modules/qcom/opensource/audio-kernel/include
 
 #remove useless qcom device tree in moto build
 ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
@@ -36,6 +36,7 @@ ifeq ($(CONFIG_ARCH_SA8155), y)
 dtbo-y +=  sa8155-audio.dtbo
 endif
 
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 ifeq ($(CONFIG_ARCH_KHAJE), y)
 dtbo-y += khaje-audio.dtbo \
 		khaje-audio-idp.dtbo \
@@ -45,6 +46,12 @@ dtbo-y += khaje-audio.dtbo \
                 khajeg-audio-idp.dtbo \
                 khajeg-audio-idp-90hz.dtbo \
 		khaje-nowcd.dtbo
+endif
+else
+
+dtbo-$(CONFIG_ARCH_KHAJE) += khaje-audio.dtbo
+dtbo-$(CONFIG_RHODE_DTB) += khaje-audio-moto-rhode-evt.dtbo \
+			     khaje-audio-moto-rhode-att.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_CROW), y)
